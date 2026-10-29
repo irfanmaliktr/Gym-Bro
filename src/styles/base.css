@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Base layer — extracted verbatim from the Google Stitch design references
+ * (design-reference/screen_*.html inline <style> blocks), plus one
+ * non-visual addition: a dark html background to avoid a white flash
+ * before the app mounts.
+ */
+@layer base {
+  html,
+  body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: #0a0a0a;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+
+  body {
+    min-height: max(884px, 100dvh);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
