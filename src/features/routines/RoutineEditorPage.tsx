@@ -733,8 +733,9 @@ function NumberField({
       </label>
       <input
         id={id}
-        type="text"
+        type="number"
         inputMode="numeric"
+        step="1"
         value={value}
         onChange={(event) => onChange(event.target.value)}
         className="w-full bg-surface-elevated text-text-primary font-numeric-input text-numeric-input text-center p-3 rounded-lg outline-none"

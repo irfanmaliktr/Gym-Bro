@@ -356,6 +356,9 @@ export function ActiveSessionPage() {
                           <div className="col-span-3 text-text-secondary font-body-sm truncate">{pText}</div>
                           <div className="col-span-3 flex justify-center">
                             <input
+                              type="number"
+                              inputMode="decimal"
+                              step="0.1"
                               value={Number.isFinite(dispW) ? (unit === 'kg' ? log.weight_kg : Number(dispW.toFixed(1))) : ''}
                               onChange={(e) => {
                                 const parsed = parseDecimal(e.target.value)
@@ -368,6 +371,9 @@ export function ActiveSessionPage() {
                           </div>
                           <div className="col-span-2 flex justify-center">
                             <input
+                              type="number"
+                              inputMode="numeric"
+                              step="1"
                               value={log.reps || ''}
                               onChange={(e) => {
                                 const parsed = parseDecimal(e.target.value)
